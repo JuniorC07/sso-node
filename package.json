@@ -11,6 +11,11 @@
     "test": "jest --passWithNoTests",
     "test:watch": "yarn test --watch",
     "test:staged": "yarn test --findRelatedTests",
+    "migrate:make": "yarn knex migrate:make --knexfile src/providers/knex/knexfile.ts", 
+    "migrate": "yarn knex migrate:up --knexfile src/providers/knex/knexfile.ts", 
+    "migrate:all": "yarn knex migrate:latest --knexfile src/providers/knex/knexfile.ts", 
+    "migrate:rollback": "yarn knex migrate:rollback --knexfile src/providers/knex/knexfile.ts", 
+    "migrate:list": "yarn knex migrate:list --knexfile src/providers/knex/knexfile.ts", 
     "commit": "npm run lint && git-cz"
   },
   "keywords": [],
@@ -21,10 +26,12 @@
   },
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "knex": "^2.4.2",
+    "pg": "^8.10.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "@types/dotenv": "^8.2.0",
     "@types/jest": "^29.5.1",
     "@types/node": "^18.16.2",
     "@typescript-eslint/eslint-plugin": "^5.59.1",

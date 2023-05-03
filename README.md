@@ -1,66 +1,62 @@
+# Development Documentation:
 
-# Documentação de desenvolvimento:
+**Running Project**
 
-
-**Rodando projeto**
-
-Dependências:
+Dependencies:
 
 ```jsx
 yarn
 ```
 
-Start projeto:
+Start project:
 
 ```jsx
 yarn dev
 ```
 
-Testes:
+Tests:
 
 ```jsx
 yarn test
 ```
 
-Testes assistidos:
+Watch Tests:
 
 ```jsx
 yarn test:watch
 ```
 
-### Padrão de Commits
+### Commit Standard
 
-Será utilizado o <a target="_blank" href="https://commitizen-tools.github.io/commitizen/">Commitizen</a> neste projeto para padronizar as mensagens de commit.
-Para utilizar é bem simples:
+The <a target="_blank" href="https://commitizen-tools.github.io/commitizen/">Commitizen</a> will be used in this project to standardize commit messages. To use it is quite simple:
 
 ```bash
-# Para adicionar todos os arquivos modificados
+# To add all modified files
 $ git add .
 
-# Este comando vai executar o commitizen atravéz de alguns scripts
+# This command will execute commitizen through some scripts
 $ yarn commit
 ```
 
-Por padrão, existem 7 campos a serem preenchidos para manter essa padronização sendo eles:
+By default, there are 7 fields to be filled in order to maintain this standardization, which are:
 
-- Tipo de commit* (fix/feat/refactor etc...)
-- Short description* (É uma descrição curta sobre o commit.)
-- Longer description (É uma descrição longa sobre o commit.)
-- Breaking changes (É um indicador se este commit afeta outras partes do sistema)
-- Issues this commit closes (Tarefa que o commit fecha)
+- Commit type* (fix/feat/refactor etc...)
+- Short description* (A short description about the commit)
+- Longer description (A long description about the commit)
+- Breaking changes (An indicator if this commit affects other parts of the system)
+- Issues this commit closes (Task that the commit closes)
 
-Depois disso é só fazer o `git push` enviar o commit para a branch.
+After that, just `git push` and send the commit to the branch.
 
+# Jest (Tests):
 
-# Jest (Testes):
-
-- Todos os testes estão configurados com Jest.
-- Jest é o principal frame de teste do mercado, com diversas referencias além de uma excelente <a target="_blank" href="https://jestjs.io/">documentação</a>.
+- All tests are configured with Jest.
+- Jest is the main testing framework in the market, with several references beyond an excellent <a target="_blank" href="https://jestjs.io">documentation</a>.
 
 # Husky:
 
-- Graças ao Husky, a fim de reforçar os padrões de projeto o commit só é permitido após a correção de qualquer problema relacionado a esses padrões, tais como testes, warnings e outros. 
+- Thanks to Husky, in order to reinforce project standards, commits are only allowed after fixing any problems related to these standards, such as tests, warnings, and others.
 
-# Eslint 
+# Eslint
 
-- Usado para seguir com a formatação do código e organização dos arquivos.
+- Used to follow the code formatting and file organization.
