@@ -1,7 +1,12 @@
 import knex from 'knex'
+import * as dotenv from 'dotenv'
+import path = require('path')
+
+dotenv.config({ path: path.join(__dirname, '../../../../.env') })
 
 const instance = knex({
-  client: 'pg',
+  client: process.env.DB_CLIENT,
+  debug: process.env.DB_LOG === 'true',
   connection: {
     database: process.env.DB_DATABASE,
     port: Number(process.env.PORT),
@@ -10,5 +15,6 @@ const instance = knex({
     host: process.env.DB_HOST
   }
 })
+console.log(process.env.DB_LOG === 'true')
 
 export default instance
